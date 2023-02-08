@@ -9,12 +9,16 @@ startBtn.addEventListener("click", () => {
     stopBtn.classList.remove('disable');
     timerId = setInterval(() => {
     docBody.style.backgroundColor = getRandomHexColor();
-  }, 1000);
+    }, 1000);
+  console.log(timerId);
 });
+
+
 
 stopBtn.addEventListener("click", () => {
     stopBtn.classList.add('disable');
-    startBtn.classList.remove('disable');
+  startBtn.classList.remove('disable');
+  console.log(timerId);
   clearInterval(timerId);
 });
 

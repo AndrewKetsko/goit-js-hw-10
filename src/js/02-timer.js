@@ -33,15 +33,20 @@ function countdownFn(startDate) {
 
     startBtn.addEventListener('click', () => {
         startBtn.classList.add('disable');
-        inputEl.classList.add('disable')
+        inputEl.classList.add('disable');
 
-        setInterval(() => { 
+        const timerId = setInterval(() => { 
             const timeToZero = startDate - Date.now();
             const timeObj = convertMs(timeToZero);
             daysEl.innerHTML = addLeadingZero(timeObj.days);
             hoursEl.innerHTML = addLeadingZero(timeObj.hours);
             minutesEl.innerHTML = addLeadingZero(timeObj.minutes);
             secondsEl.innerHTML = addLeadingZero(timeObj.seconds);
+            if (timeToZero < 1000) {
+                clearInterval(timerId);
+                startBtn.classList.remove('disable');
+                inputEl.classList.remove('disable');
+            };
         }, 1000);
     })
 };
