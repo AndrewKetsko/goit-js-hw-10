@@ -1,5 +1,5 @@
-startBtn = document.querySelector('button[data-start]');
-stopBtn = document.querySelector('button[data-stop]');
+startBtn = document.querySelector('.js-start');
+stopBtn = document.querySelector('.js-stop');
 docBody = document.querySelector('body');
 stopBtn.classList.add('disable');
 
