@@ -17,7 +17,7 @@ function submitFn(e) {
   let fullDelay = +delay.value;
   const promiseArr = [];
   
-  for (i = 0; i < amount.value; i += 1) {
+  for (let i = 0; i < amount.value; i += 1) {
 
     fullDelay = +delay.value + step.value * i;
     
