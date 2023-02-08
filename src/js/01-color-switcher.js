@@ -6,7 +6,7 @@ stopBtn.classList.add('disable');
 startBtn.addEventListener("click", () => {
     startBtn.classList.add('disable');
     stopBtn.classList.remove('disable');
-    timerId = setInterval(() => {
+    let timerId = setInterval(() => {
     docBody.style.backgroundColor = getRandomHexColor();
   }, 1000);
 });
