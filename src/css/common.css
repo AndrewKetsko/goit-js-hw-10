@@ -23,16 +23,23 @@ img {
   opacity: .5;
 }
 
+input {
+  height: 40px;
+    width: 150px;
+}
+
 button {
   height: 40px;
   width: 100px;
   cursor: pointer;
   }
 
-  button:first-of-type {
+  button.third,
+  button.second,
+  button.first:first-of-type {
 background-color: green;
   }
 
-  button:last-of-type {
+  button.first:last-of-type {
     background-color: red;
   }

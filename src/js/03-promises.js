@@ -1,4 +1,5 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 formEl = document.querySelector('form');
 buttonEl = document.querySelector('button');
 
