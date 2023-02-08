@@ -10,7 +10,6 @@ startBtn.addEventListener("click", () => {
     timerId = setInterval(() => {
     docBody.style.backgroundColor = getRandomHexColor();
     }, 1000);
-  console.log(timerId);
 });
 
 
@@ -18,7 +17,6 @@ startBtn.addEventListener("click", () => {
 stopBtn.addEventListener("click", () => {
     stopBtn.classList.add('disable');
   startBtn.classList.remove('disable');
-  console.log(timerId);
   clearInterval(timerId);
 });
 
