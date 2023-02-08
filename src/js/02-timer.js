@@ -2,12 +2,12 @@ import flatpickr from "flatpickr";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import "flatpickr/dist/flatpickr.min.css";
 
-daysEl = document.querySelector('span[data-days]');
-hoursEl = document.querySelector('span[data-hours]');
-minutesEl = document.querySelector('span[data-minutes]');
-secondsEl = document.querySelector('span[data-seconds]');
-inputEl = document.querySelector('#datetime-picker')
-startBtn = document.querySelector('button[data-start]');
+const daysEl = document.querySelector('span[data-days]');
+const hoursEl = document.querySelector('span[data-hours]');
+const minutesEl = document.querySelector('span[data-minutes]');
+const secondsEl = document.querySelector('span[data-seconds]');
+const inputEl = document.querySelector('#datetime-picker')
+const startBtn = document.querySelector('button[data-start]');
 
 startBtn.classList.add('disable');
 

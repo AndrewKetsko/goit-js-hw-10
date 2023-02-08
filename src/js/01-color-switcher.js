@@ -1,6 +1,6 @@
-startBtn = document.querySelector('.js-start');
-stopBtn = document.querySelector('.js-stop');
-docBody = document.querySelector('body');
+const startBtn = document.querySelector('button[data-start]');
+const stopBtn = document.querySelector('button[data-stop]');
+const docBody = document.querySelector('body');
 stopBtn.classList.add('disable');
 
 startBtn.addEventListener("click", () => {
