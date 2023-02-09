@@ -44,7 +44,6 @@ function countdownFn(startDate) {
             secondsEl.innerHTML = addLeadingZero(timeObj.seconds);
             if (timeToZero < 1000) {
                 clearInterval(timerId);
-                startBtn.classList.remove('disable');
                 inputEl.classList.remove('disable');
             };
         }, 1000);
