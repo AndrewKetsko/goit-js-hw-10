@@ -14,6 +14,7 @@ inputEl.addEventListener('input', debounce(func, 1000));
 function func(e) {
     listEl.innerHTML = '';
     cardEl.innerHTML = '';
+    cardEl.classList.remove('country-border');
     if (e.target.value.trim()) { fetchCountries(e.target.value.trim()) };
 };
 
@@ -41,7 +42,7 @@ function toManyCountries(list) {
 };
 
 function countryList(list) {
-    if (list.length === 1) {return list;}
+    if (list.length === 1) { return list; }
     cardEl.innerHTML = '';
     const markup = list.map(el => {
         const { name: { official }, flags: { svg } } = el;
@@ -56,6 +57,7 @@ function countryList(list) {
 };
 
 function countryCard(country) {
+    cardEl.classList.add('country-border');
     const [{ name: { official }, capital="none", population, flags: { svg }, languages }] = country;
     markup = `
         <img src="${svg}" alt="">
